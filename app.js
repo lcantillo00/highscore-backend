@@ -35,7 +35,7 @@ app.post('/score', function(req,res){
 })
 
 app.get('/score/leaderboard/20',function(req,res){
-   score.find().limit(20)
+   score.find().sort({score: -1}).limit(20)
    .exec(function(err,score){
        if(err){
            console.log("error no conection with db");
