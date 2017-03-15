@@ -34,7 +34,7 @@ app.post('/score', function(req,res){
     })
 })
 
-app.get('/score/leaderboard/20',function(req,res){
+app.get('/score/20',function(req,res){
    score.find().sort({score: -1}).limit(20)
    .exec(function(err,score){
        if(err){
